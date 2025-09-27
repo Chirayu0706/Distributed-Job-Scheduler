@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "url": "https://api.example.com/users",
+  "headers": {
+    "Authorization": "Bearer abc123",
+    "Content-Type": "application/json"
+  },
+  "queryParams": {
+    "verbose": "true"
+  },
+  "body": {
+    "name": "John Doe",
+    "email": "john@example.com"
+  }
+}

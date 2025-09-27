@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  api:
+    build: ./API
+    image: api:latest
+    container_name: API1
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rabbitmq
+  scheduler:
+    build: ./SCHEDULER
+    image: scheduler:latest
+    container_name: SCHEDULER1
+    depends_on:
+      - api
+      - rabbitmq
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: RABBITMQ1
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  executor:
+    build: ./EXECUTOR
+    image: executor:latest
+    container_name: EXECUTOR1
+    environment:
+      - INSTANCE_NAME=EXECUTOR1
+    depends_on:
+      - rabbitmq

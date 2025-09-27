@@ -1,0 +1,8 @@
+## FOR SCHEDULER
+FROM eclipse-temurin:17-jre
+
+WORKDIR /app
+
+COPY target/SCHEDULER*.jar SCHEDULER.jar
+
+ENTRYPOINT ["java", "-jar", "SCHEDULER.jar"]

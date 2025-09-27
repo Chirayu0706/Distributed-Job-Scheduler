@@ -1,0 +1,8 @@
+## FOR EXECUTOR
+FROM eclipse-temurin:17-jre
+
+WORKDIR /app
+
+COPY target/EXECUTOR*.jar EXECUTOR.jar
+
+ENTRYPOINT ["java", "-jar", "EXECUTOR.jar"]

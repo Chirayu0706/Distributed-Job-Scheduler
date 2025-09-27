@@ -1,0 +1,144 @@
+UPDATE :- 
+{
+  "ref": null,
+  "event": "postgres_changes",
+  "payload": {
+    "data": {
+      "table": "job_details",
+      "type": "UPDATE",
+      "record": {
+        "job_cron": " * * *",
+        "job_dependency": "",
+        "job_name": "Database Backup2",
+        "job_status": "Pending",
+        "job_work": "Backup tables"
+      },
+      "columns": [
+        {
+          "name": "job_name",
+          "type": "varchar"
+        },
+        {
+          "name": "job_cron",
+          "type": "varchar"
+        },
+        {
+          "name": "job_work",
+          "type": "text"
+        },
+        {
+          "name": "job_status",
+          "type": "varchar"
+        },
+        {
+          "name": "job_dependency",
+          "type": "varchar"
+        }
+      ],
+      "errors": null,
+      "schema": "public",
+      "commit_timestamp": "2025-09-22T09:59:18.239Z",
+      "old_record": {
+        "job_name": "Database Backup2"
+      }
+    },
+    "ids": [
+      82887563
+    ]
+  },
+  "topic": "realtime:*"
+}
+
+
+INSERT:-
+{
+  "ref": null,
+  "event": "postgres_changes",
+  "payload": {
+    "data": {
+      "table": "job_details",
+      "type": "INSERT",
+      "record": {
+        "job_cron": "* * * *",
+        "job_dependency": "ABC",
+        "job_name": "tempjob",
+        "job_status": "ujyt",
+        "job_work": "fdsaf"
+      },
+      "columns": [
+        {
+          "name": "job_name",
+          "type": "varchar"
+        },
+        {
+          "name": "job_cron",
+          "type": "varchar"
+        },
+        {
+          "name": "job_work",
+          "type": "text"
+        },
+        {
+          "name": "job_status",
+          "type": "varchar"
+        },
+        {
+          "name": "job_dependency",
+          "type": "varchar"
+        }
+      ],
+      "errors": null,
+      "schema": "public",
+      "commit_timestamp": "2025-09-22T10:33:48.729Z"
+    },
+    "ids": [
+      82887563
+    ]
+  },
+  "topic": "realtime:*"
+}
+
+
+DELETE:-
+{
+  "ref": null,
+  "event": "postgres_changes",
+  "payload": {
+    "data": {
+      "table": "job_details",
+      "type": "DELETE",
+      "columns": [
+        {
+          "name": "job_name",
+          "type": "varchar"
+        },
+        {
+          "name": "job_cron",
+          "type": "varchar"
+        },
+        {
+          "name": "job_work",
+          "type": "text"
+        },
+        {
+          "name": "job_status",
+          "type": "varchar"
+        },
+        {
+          "name": "job_dependency",
+          "type": "varchar"
+        }
+      ],
+      "errors": null,
+      "schema": "public",
+      "commit_timestamp": "2025-09-22T10:34:36.722Z",
+      "old_record": {
+        "job_name": "tempjob"
+      }
+    },
+    "ids": [
+      82887563
+    ]
+  },
+  "topic": "realtime:*"
+}

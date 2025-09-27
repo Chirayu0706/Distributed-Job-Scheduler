@@ -1,0 +1,10 @@
+## FOR API
+FROM eclipse-temurin:17-jre
+
+WORKDIR /app
+
+COPY target/*.jar API.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "API.jar"]
